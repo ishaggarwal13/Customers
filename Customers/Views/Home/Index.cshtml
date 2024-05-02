@@ -1,0 +1,57 @@
+﻿@{
+        ViewData["Title"] = "Home Page";
+}
+
+<style>
+    /* Button */
+    .btn {
+        background-color: #ff6f61;
+        border-color: #ff6f61;
+        transition: background-color 0.3s ease;
+    }
+
+        /* Hover Effect for Button */
+        .btn:hover {
+            background-color: #ff504e;
+            border-color: #ff504e;
+        }
+</style>
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4 fw-bold" style=" color: #ff6f61;">Welcome to Our Store</h1>
+        <p class="lead" style="color: #555;">We value your opinion! Help us serve you better by sharing your feedback.</p>
+        <p>Whether it's a suggestion, compliment, or complaint, your feedback matters to us.</p>
+        <p>Please take a moment to fill out our quick and easy feedback form.</p>
+        <p>
+            <a class="btn mt-5 text-white" asp-action="CustomerForm">Customer form</a>
+        </p>
+    </div>
+
+    <!-- Customer Testimonials -->
+    <hr>
+    <h2 class="text-center my-4">What Our Customers Say</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm" style=" background-color: #ff6f61;">
+                <div class="card-body">
+                    <p class="card-text text-white">"Excellent service! I'm always satisfied with my purchases from this store."</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm" style=" background-color: #ff6f61;">
+                <div class="card-body">
+                    <p class="card-text text-white">"The staff here is friendly and helpful. They make shopping a breeze!"</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm" style=" background-color: #ff6f61;">
+                <div class="card-body">
+                    <p class="card-text text-white">"Great selection of products and reasonable prices. Will definitely be back!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

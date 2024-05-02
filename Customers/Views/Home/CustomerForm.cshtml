@@ -1,0 +1,91 @@
+﻿@model Customers.Models.Customer
+
+@{
+        ViewData["Title"] = "Home Page";
+}
+
+<style>
+    /* Card Header */
+    .card-header {
+        background-color: #ff6f61; /* Coral color for the header */
+        color: #fff;
+        padding: 15px 0;
+        border-radius: 10px 10px 0 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form Labels */
+    .form-label {
+        font-weight: bold;
+        color: #555;
+    }
+
+    /* Validation Error Messages */
+    .text-danger {
+        color: green;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    /* Primary Button */
+    .btn-primary {
+        background-color: #ff6f61; /* Coral color for the button */
+        border-color: #ff6f61;
+        transition: background-color 0.3s ease;
+    }
+
+        /* Hover Effect for Primary Button */
+        .btn-primary:hover {
+            background-color: #ff504e; /* Slightly darker coral color on hover */
+            border-color: #ff504e;
+        }
+</style>
+
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">Customer Form</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="CustomerForm" method="post">
+                        <div asp-validation-summary="All"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="FirstName" class="form-label">First Name<span style="color: red;">*</span> :</label>
+                            <input asp-for="FirstName" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="LastName" class="form-label">Last Name<span style="color: red;">*</span> :</label>
+                            <input asp-for="LastName" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label">Email<span style="color: red;">*</span> :</label>
+                            <input type="email" asp-for="Email" class="form-control" />
+                            
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="WillBuyAgain" class="form-label">Will you buy again?<span style="color: red;">*</span>:</label>
+                            <select asp-for="WillBuyAgain" class="form-control">
+                                <option value="">Choose an option</option>
+                                <option value="true">Yes</option>
+                                <option value="false">No</option>
+                            </select>
+                            
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
